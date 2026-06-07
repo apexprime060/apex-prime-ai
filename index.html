@@ -4,122 +4,263 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apex Prime AI</title>
+
 <style>
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-        font-family:Arial,sans-serif;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
 
-    body{
-        background:#0d1117;
-        color:white;
-    }
+body{
+background:#0a0f1c;
+color:white;
+}
 
-    header{
-        background:#161b22;
-        padding:20px;
-        text-align:center;
-    }
+/* Navbar */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:#111827;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 0 15px rgba(0,191,255,0.4);
+}
 
-    header h1{
-        color:#00bfff;
-    }
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
 
-    .hero{
-        text-align:center;
-        padding:60px 20px;
-    }
+.logo img{
+height:55px;
+}
 
-    .hero h2{
-        font-size:2rem;
-        margin-bottom:10px;
-    }
+.logo h2{
+color:#00bfff;
+font-size:24px;
+}
 
-    .hero p{
-        color:#c9d1d9;
-        margin-bottom:20px;
-    }
+.menu{
+display:flex;
+list-style:none;
+gap:20px;
+}
 
-    .btn{
-        background:#00bfff;
-        color:white;
-        padding:12px 24px;
-        text-decoration:none;
-        border-radius:8px;
-    }
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
 
-    .tools{
-        display:grid;
-        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-        gap:20px;
-        padding:40px;
-    }
+.menu a:hover{
+color:#00bfff;
+}
 
-    .card{
-        background:#161b22;
-        padding:20px;
-        border-radius:10px;
-        text-align:center;
-    }
+/* Hero */
+.hero{
+text-align:center;
+padding:80px 20px;
+background:linear-gradient(135deg,#001f3f,#00bfff);
+}
 
-    .card h3{
-        color:#00bfff;
-        margin-bottom:10px;
-    }
+.hero img{
+width:260px;
+max-width:90%;
+margin-bottom:20px;
+}
 
-    footer{
-        text-align:center;
-        padding:20px;
-        background:#161b22;
-        margin-top:20px;
-    }
+.hero h1{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#00bfff;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:white;
+color:#00bfff;
+}
+
+/* Tools */
+.section-title{
+text-align:center;
+margin:50px 0 20px;
+color:#00bfff;
+font-size:40px;
+}
+
+.tools{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:30px;
+}
+
+.card{
+background:#161b22;
+padding:25px;
+border-radius:15px;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #00bfff;
+}
+
+.card h3{
+color:#00bfff;
+margin-bottom:10px;
+}
+
+.card a{
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+background:#00bfff;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+
+/* About */
+.about{
+max-width:900px;
+margin:auto;
+padding:50px 20px;
+text-align:center;
+}
+
+.about p{
+line-height:1.8;
+color:#d1d5db;
+}
+
+/* Footer */
+footer{
+background:#111827;
+padding:20px;
+text-align:center;
+margin-top:30px;
+color:#9ca3af;
+}
+
+@media(max-width:768px){
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+.menu{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:38px;
+}
+}
 </style>
 </head>
+
 <body>
 
-<header>
-    <img src="file_00000000a1287208999b07b55f00cb96.png"
-         alt="Apex Prime AI Logo"
-         style="width:250px;display:block;margin:auto;">
+<nav>
+<div class="logo">
+<img src="file_00000000a1287208999b07b55f00cb96.png" alt="Apex Prime AI Logo">
+<h2>Apex Prime AI</h2>
+</div>
 
-    <h1>Apex Prime AI</h1>
-    <p>Discover the Best AI Tools</p>
-</header>
+<ul class="menu">
+<li><a href="#">Home</a></li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+</nav>
 
 <section class="hero">
-    <h2>Find Powerful AI Tools</h2>
-    <p>Explore AI tools for writing, coding, design, and productivity.</p>
-    <a href="#" class="btn">Explore Tools</a>
+<img src="file_00000000a1287208999b07b55f00cb96.png" alt="Logo">
+
+<h1>Apex Prime AI</h1>
+<p>Discover The Best AI Tools For Productivity, Coding, Design & Creativity</p>
+
+<a href="#tools" class="btn">Explore AI Tools</a>
 </section>
+
+<h2 class="section-title" id="tools">Popular AI Tools</h2>
 
 <section class="tools">
 
-    <div class="card">
-        <h3><a href="https://chatgpt.com" target="_blank" style="color:#00bfff;text-decoration:none;">ChatGPT</a></h3>
-        <p>AI assistant for writing, coding and learning.</p>
-    </div>
+<div class="card">
+<h3>ChatGPT</h3>
+<p>AI assistant for writing, coding and learning.</p>
+<a href="https://chatgpt.com" target="_blank">Visit</a>
+</div>
 
-    <div class="card">
-        <h3><a href="https://gemini.google.com" target="_blank" style="color:#00bfff;text-decoration:none;">Gemini</a></h3>
-        <p>Google's AI assistant for research and productivity.</p>
-    </div>
+<div class="card">
+<h3>Gemini</h3>
+<p>Google AI assistant.</p>
+<a href="https://gemini.google.com" target="_blank">Visit</a>
+</div>
 
-    <div class="card">
-        <h3><a href="https://claude.ai" target="_blank" style="color:#00bfff;text-decoration:none;">Claude</a></h3>
-        <p>Advanced AI for documents and content creation.</p>
-    </div>
+<div class="card">
+<h3>Claude</h3>
+<p>Advanced AI for content creation.</p>
+<a href="https://claude.ai" target="_blank">Visit</a>
+</div>
 
-    <div class="card">
-        <h3><a href="https://www.canva.com" target="_blank" style="color:#00bfff;text-decoration:none;">Canva AI</a></h3>
-        <p>Create stunning designs with AI-powered tools.</p>
-    </div>
+<div class="card">
+<h3>Canva AI</h3>
+<p>Create stunning AI-powered designs.</p>
+<a href="https://www.canva.com" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>Perplexity AI</h3>
+<p>AI-powered answer engine.</p>
+<a href="https://www.perplexity.ai" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>GitHub Copilot</h3>
+<p>AI coding assistant for developers.</p>
+<a href="https://github.com/features/copilot" target="_blank">Visit</a>
+</div>
 
 </section>
 
+<section class="about" id="about">
+<h2 class="section-title">About Apex Prime AI</h2>
+
+<p>
+Apex Prime AI helps users discover the world's best AI tools for writing,
+coding, research, design, productivity and innovation in one place.
+</p>
+</section>
+
 <footer>
-    <p>© 2026 Apex Prime AI. All Rights Reserved.</p>
+© 2026 Apex Prime AI | All Rights Reserved
 </footer>
 
 </body>
